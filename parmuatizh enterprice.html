@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parmuatizh Enterprise</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+        header {
+            background-color: #2a9d8f;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #333;
+            text-align: center;
+            padding: 10px 0;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        #content {
+            margin: 20px;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        h2, h3 {
+            color: #2a9d8f;
+        }
+        .media-container {
+            display: flex;
+            gap: 10px;
+            margin: 20px 0;
+        }
+        .media-container video,
+        .media-container img {
+            width: 50%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .team {
+            margin-top: 20px;
+        }
+        .team img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .team-member {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Parmuatizh Enterprise</h1>
+    <p>Your Trusted Partner in Quality Goods</p>
+</header>
+
+<nav>
+    <a href="#" onclick="loadSection('home')">Home</a>
+    <a href="#" onclick="loadSection('about')">About Us</a>
+    <a href="#" onclick="loadSection('services')">Our Services</a>
+    <a href="#" onclick="loadSection('contact')">Contact Us</a>
+</nav>
+
+<div id="content">
+    <!-- Content will be dynamically loaded here -->
+</div>
+
+<footer>
+    <p>&copy; 2024 Parmuatizh Enterprise - All Rights Reserved</p>
+</footer>
+
+<script>
+    const sections = {
+        home: `
+            <h2>Welcome to Parmuatizh Enterprise</h2>
+            <p>At Parmuatizh Enterprise, we specialize in providing top-quality goods, including vehicles, construction materials, farm tools, foods, and house equipment. Our commitment to customer satisfaction and reliable service has made us a trusted name in Kenya and beyond.</p>
+            <div class="media-container">
+                <video controls>
+                    <source src="videos/company-overview.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <img src="images/company-photo.jpg" alt="Parmuatizh Enterprise Office">
+            </div>
+        `,
+        about: `
+            <h2>About Us</h2>
+            <p><strong>Vision:</strong> To become the leading provider of high-quality goods and services across Kenya and the region.</p>
+            <p><strong>Mission:</strong> To deliver reliable, affordable, and innovative solutions that meet the diverse needs of our clients.</p>
+            <img src="images/vision.jpg" alt="Our Vision">
+            <p>We are committed to providing exceptional products and services while fostering long-term relationships with our clients. Our business values integrity, quality, and customer satisfaction above all else.</p>
+        `,
+        services: `
+            <h2>Our Services</h2>
+            <p>We offer a wide range of services to meet the needs of our customers:</p>
+            <h3>1. Construction Materials</h3>
+            <p>We provide high-quality materials for construction projects, ensuring durability and success for both residential and commercial buildings.</p>
+            <img src="images/construction-materials.jpg" alt="Construction Materials">
+            <h3>2. Vehicles</h3>
+            <p>Our wide selection of vehicles includes cars, trucks, and motorcycles, all carefully chosen for reliability and performance.</p>
+            <img src="images/vehicles.jpg" alt="Vehicles">
+            <h3>3. Farm Tools</h3>
+            <p>We offer durable and efficient farm tools to improve productivity in agricultural activities.</p>
+            <img src="images/farm-tools.jpg" alt="Farm Tools">
+            <h3>4. Foods</h3>
+            <p>We supply fresh and packaged foods, including grains, vegetables, and dairy products, sourced from trusted suppliers.</p>
+            <img src="images/foods.jpg" alt="Foods">
+            <h3>5. House Equipment</h3>
+            <p>Our selection includes high-quality furniture, kitchenware, and home appliances to cater to all your household needs.</p>
+            <img src="images/house-equipment.jpg" alt="House Equipment">
+        `,
+        contact: `
+            <h2>Contact Us</h2>
+            <p>We're always here to assist you. Feel free to reach out to us for any inquiries or support.</p>
+            <p><strong>Main Office:</strong> Homabay County, Kenya</p>
+            <p><strong>Other Locations:</strong> Nairobi, Mombasa, Kisumu, Kitui, Kwale, Kampala, Dar es Salaam, and other regions</p>
+            <p><strong>Phone:</strong> 0716868680</p>
+            <p><strong>Email:</strong> <a href="mailto:parmuatizhparneah@gmail.com">parmuatizhparneah@gmail.com</a></p>
+            <p><strong>Operating Hours:</strong> Monday, 8:00 a.m. - 4:00 p.m.</p>
+            <h3>Our Team</h3>
+            <div class="team">
+                <div class="team-member">
+                    <img src="images/joseph-tatu.jpg" alt="Joseph Tatu">
+                    <p><strong>Joseph Tatu</strong> - Owner</p>
+                    <p><strong>Contact:</strong> 0716868680</p>
+                </div>
+                <div class="team-member">
+                    <img src="images/mercy-mumo.jpg" alt="Mercy Mumo">
+                    <p><strong>Mercy Mumo</strong> - Manager</p>
+                    <p><strong>Contact:</strong> 0748583555</p>
+                </div>
+                <div class="team-member">
+                    <img src="images/alfred-nthiani.jpg" alt="Alfred Nthiani">
+                    <p><strong>Alfred Nthiani</strong> - Secretary</p>
+                    <p><strong>Contact:</strong> 0796134422</p>
+                </div>
+            </div>
+        `
+    };
+
+    function loadSection(section) {
+        document.getElementById('content').innerHTML = sections[section];
+    }
+
+    // Load the home section by default
+    loadSection('home');
+</script>
+
+</body>
+</html>
